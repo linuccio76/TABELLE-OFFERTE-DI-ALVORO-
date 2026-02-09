@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Offerte di Lavoro - Febbraio</title>
+    <title>Offerte di Lavoro Economato - Febbraio 2026</title>
     <style>
         * {
             margin: 0;
@@ -13,205 +13,495 @@
         }
         
         body {
-            background-color: #f5f7fa;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             color: #333;
             line-height: 1.6;
             padding: 20px;
+            min-height: 100vh;
         }
         
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 30px auto;
             background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+            overflow: hidden;
         }
         
         header {
             text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eaeaea;
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid #f0f0f0;
         }
         
         h1 {
             color: #2c3e50;
-            margin-bottom: 10px;
-            font-size: 2.2rem;
+            margin-bottom: 15px;
+            font-size: 2.4rem;
+            background: linear-gradient(90deg, #3498db, #2c3e50);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
         }
         
         .subtitle {
             color: #7f8c8d;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            font-weight: 400;
         }
         
-        .info-box {
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-box {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 150px;
+            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .community-banner {
+            background: linear-gradient(90deg, #27ae60, #219955);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.2);
+        }
+        
+        .community-banner h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .community-banner p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .community-btn {
+            display: inline-block;
+            background-color: white;
+            color: #27ae60;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .community-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
             background-color: #f8f9fa;
-            border-left: 4px solid #3498db;
-            padding: 15px;
-            margin-bottom: 25px;
-            border-radius: 0 5px 5px 0;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin-top: 30px;
+            border-radius: 8px;
+            border: 1px solid #eaeaea;
         }
         
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 10px;
+            min-width: 800px;
+        }
+        
+        thead {
+            background: linear-gradient(90deg, #2c3e50, #34495e);
         }
         
         th {
-            background-color: #2c3e50;
             color: white;
             font-weight: 600;
             text-align: left;
-            padding: 15px;
+            padding: 18px 15px;
+            font-size: 1rem;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        th:last-child {
+            border-right: none;
         }
         
         td {
-            padding: 15px;
+            padding: 16px 15px;
             border-bottom: 1px solid #eaeaea;
+            vertical-align: middle;
         }
         
-        tr:hover {
-            background-color: #f8f9fa;
+        tbody tr {
+            transition: all 0.3s ease;
+        }
+        
+        tbody tr:hover {
+            background-color: #f8fafc;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
         .nome-figura {
-            font-weight: 600;
+            font-weight: 700;
             color: #2c3e50;
+            background-color: #ecf0f1;
+            padding: 6px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.95rem;
         }
         
-        .struttura {
-            color: #2980b9;
-        }
-        
-        a {
+        .data-badge {
+            background-color: #e8f4fc;
             color: #3498db;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        .link-icon {
-            margin-right: 6px;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 500;
+            display: inline-block;
             font-size: 0.9rem;
         }
         
-        .note {
-            font-style: italic;
-            color: #7f8c8d;
+        .struttura {
+            font-weight: 600;
+            color: #2980b9;
+            font-size: 1.05rem;
         }
         
-        .badge {
+        .location {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-top: 3px;
+        }
+        
+        .link-btn {
             display: inline-block;
-            background-color: #ecf0f1;
-            color: #2c3e50;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11);
+            margin-bottom: 5px;
+            width: 100%;
+            text-align: center;
         }
         
-        .empty-sheet {
-            background-color: #f8f9fa;
-            padding: 20px;
+        .link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1);
+            background: linear-gradient(90deg, #2980b9, #2573a7);
+        }
+        
+        .community-link-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #27ae60, #219955);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2);
+            width: 100%;
             text-align: center;
-            border-radius: 5px;
-            color: #7f8c8d;
-            margin-top: 30px;
+        }
+        
+        .community-link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(39, 174, 96, 0.25);
+            background: linear-gradient(90deg, #219955, #1d854b);
+        }
+        
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
         
         footer {
             margin-top: 40px;
             text-align: center;
-            color: #95a5a6;
+            color: #7f8c8d;
             font-size: 0.9rem;
             padding-top: 20px;
             border-top: 1px solid #eaeaea;
         }
         
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            color: #3498db;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            color: #2980b9;
+        }
+        
         @media (max-width: 768px) {
             .container {
-                padding: 15px;
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .community-banner {
+                padding: 20px;
+            }
+            
+            .community-banner h2 {
+                font-size: 1.5rem;
+            }
+            
+            .community-btn {
+                padding: 12px 24px;
+                font-size: 1rem;
+            }
+            
+            .stat-box {
+                min-width: 120px;
+                padding: 12px 15px;
+            }
+            
+            .stat-number {
+                font-size: 1.5rem;
             }
             
             th, td {
-                padding: 10px 8px;
+                padding: 12px 10px;
                 font-size: 0.9rem;
             }
             
-            table {
-                display: block;
-                overflow-x: auto;
+            .link-btn, .community-link-btn {
+                padding: 8px 12px;
+                font-size: 0.85rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stats {
+                gap: 10px;
+            }
+            
+            .stat-box {
+                min-width: 100px;
+                padding: 10px;
             }
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Offerte di Lavoro - Febbraio 2026</h1>
-            <p class="subtitle">Ruoli di Economo/a disponibili in strutture ricettive</p>
+            <h1>📋 Offerte di Lavoro Economato</h1>
+            <p class="subtitle">Posizioni aperte a Febbraio 2026 nel settore hospitality</p>
+            
+            <div class="stats">
+                <div class="stat-box">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Offerte Totali</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Regioni</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">1-02-2026</span>
+                    <span class="stat-label">Data pubblicazione</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Ruolo Economato</span>
+                </div>
+            </div>
         </header>
         
-        <div class="info-box">
-            <p><strong>Informazioni:</strong> Questa tabella è generata dal file "offerte di lavoro febbraio.xlsx". Contiene <strong>4 offerte di lavoro</strong> per il ruolo di Economo/a, tutte pubblicate il 1° febbraio 2026.</p>
+        <div class="community-banner">
+            <h2>💼 Unisciti a Economato Plus</h2>
+            <p>Entra nella community dedicata a professionisti dell'economato e controllo costi nel settore hospitality.<br>Condividi esperienze, scopri opportunità e cresci con noi.</p>
+            <a href="https://bit.ly/4kj9aWb" target="_blank" class="community-btn">
+                <i class="fas fa-users" style="margin-right: 8px;"></i> Entra nella Community
+            </a>
         </div>
         
         <main>
-            <h2>Foglio 1 - Offerte Attive</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome Figura</th>
-                        <th>Mese</th>
-                        <th>Struttura</th>
-                        <th>Link</th>
-                        <th>Note</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><span class="nome-figura">Economo/a</span></td>
-                        <td><span class="badge">Febbraio 2026</span></td>
-                        <td class="struttura">Albergo Villa Treville - Positano</td>
-                        <td><a href="https://www.jobintourism.it/search-offerte/?_sft_aree=back-office" target="_blank"><span class="link-icon">🔗</span> Visualizza offerta</a></td>
-                        <td class="note"></td>
-                    </tr>
-                    <tr>
-                        <td><span class="nome-figura">Economo/a</span></td>
-                        <td><span class="badge">Febbraio 2026</span></td>
-                        <td class="struttura">LANGOSTERIA</td>
-                        <td><a href="https://www.linkedin.com/jobs/search/?currentJobId=4368717935&keywords=economato&origin=BLENDED_SEARCH_RESULT_NAVIGATION_SEE_ALL&originToLandingJobPostings=4368717935%2C4369776898%2C4370391216#:~:text=Avanti-,Langosteria,-Condividi" target="_blank"><span class="link-icon">🔗</span> Visualizza offerta</a></td>
-                        <td class="note"></td>
-                    </tr>
-                    <tr>
-                        <td><span class="nome-figura">Economo/a</span></td>
-                        <td><span class="badge">Febbraio 2026</span></td>
-                        <td class="struttura">AF GESTIONI (CARDEDU)</td>
-                        <td><a href="https://www.subito.it/annunci-sardegna/vendita/offerte-lavoro/nuoro/cardedu/?q=economo" target="_blank"><span class="link-icon">🔗</span> Visualizza offerta</a></td>
-                        <td class="note"></td>
-                    </tr>
-                    <tr>
-                        <td><span class="nome-figura">Economo</span></td>
-                        <td><span class="badge">Febbraio 2026</span></td>
-                        <td class="struttura">HOTEL CALA GINEPRO</td>
-                        <td><a href="https://www.jobintourism.it/search-offerte/?_sft_aree=back-office&sf_paged=2" target="_blank"><span class="link-icon">🔗</span> Visualizza offerta</a></td>
-                        <td class="note"></td>
-                    </tr>
-                </tbody>
-            </table>
-
-            
-            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="15%">Posizione</th>
+                            <th width="15%">Data</th>
+                            <th width="25%">Struttura</th>
+                            <th width="25%">Link Offerta</th>
+                            <th width="20%">Vedi/Iscriviti</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="nome-figura">Economo/a</span>
+                            </td>
+                            <td>
+                                <span class="data-badge">01 Feb 2026</span>
+                            </td>
+                            <td>
+                                <div class="struttura">Albergo Villa Treville</div>
+                                <div class="location">📍 Positano (Campania)</div>
+                            </td>
+                            <td>
+                                <div class="btn-container">
+                                    <a href="https://www.jobintourism.it/search-offerte/?_sft_aree=back-office" target="_blank" class="link-btn">
+                                        <i class="fas fa-external-link-alt" style="margin-right: 5px;"></i> Vedi Offerta
+                                    </a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-container">
+                                    <a href="https://bit.ly/4kj9aWb" target="_blank" class="community-link-btn">
+                                        <i class="fas fa-user-plus" style="margin-right: 5px;"></i> Iscriviti
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-figura">Economo/a</span>
+                            </td>
+                            <td>
+                                <span class="data-badge">01 Feb 2026</span>
+                            </td>
+                            <td>
+                                <div class="struttura">LANGOSTERIA</div>
+                                <div class="location">📍 Località non specificata</div>
+                            </td>
+                            <td>
+                                <div class="btn-container">
+                                    <a href="https://www.linkedin.com/jobs/search/?currentJobId=4368717935&keywords=economato&origin=BLENDED_SEARCH_RESULT_NAVIGATION_SEE_ALL&originToLandingJobPostings=4368717935%2C4369776898%2C4370391216#:~:text=Avanti-,Langosteria,-Condividi" target="_blank" class="link-btn">
+                                        <i class="fas fa-external-link-alt" style="margin-right: 5px;"></i> Vedi Offerta
+                                    </a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-container">
+                                    <a href="https://bit.ly/4kj9aWb" target="_blank" class="community-link-btn">
+                                        <i class="fas fa-user-plus" style="margin-right: 5px;"></i> Iscriviti
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-figura">Economo/a</span>
+                            </td>
+                            <td>
+                                <span class="data-badge">01 Feb 2026</span>
+                            </td>
+                            <td>
+                                <div class="struttura">AF GESTIONI</div>
+                                <div class="location">📍 Cardedu, Nuoro (Sardegna)</div>
+                            </td>
+                            <td>
+                                <div class="btn-container">
+                                    <a href="https://www.subito.it/annunci-sardegna/vendita/offerte-lavoro/nuoro/cardedu/?q=economo" target="_blank" class="link-btn">
+                                        <i class="fas fa-external-link-alt" style="margin-right: 5px;"></i> Vedi Offerta
+                                    </a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-container">
+                                    <a href="https://bit.ly/4kj9aWb" target="_blank" class="community-link-btn">
+                                        <i class="fas fa-user-plus" style="margin-right: 5px;"></i> Iscriviti
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-figura">Economo/a</span>
+                            </td>
+                            <td>
+                                <span class="data-badge">01 Feb 2026</span>
+                            </td>
+                            <td>
+                                <div class="struttura">HOTEL CALA GINEPRO</div>
+                                <div class="location">📍 Località non specificata</div>
+                            </td>
+                            <td>
+                                <div class="btn-container">
+                                    <a href="https://www.jobintourism.it/search-offerte/?_sft_aree=back-office&sf_paged=2" target="_blank" class="link-btn">
+                                        <i class="fas fa-external-link-alt" style="margin-right: 5px;"></i> Vedi Offerta
+                                    </a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-container">
+                                    <a href="https://bit.ly/4kj9aWb" target="_blank" class="community-link-btn">
+                                        <i class="fas fa-user-plus" style="margin-right: 5px;"></i> Iscriviti
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
         
         <footer>
-            <p>Tabella generata dal file "offerte di lavoro febbraio visita www.economatoplus.org | Data di estrazione: Febbraio 2026</p>
+            <p><strong>Economato Plus</strong> - Community professionale per economato e controllo costi nel settore hospitality</p>
+            <p>Dati aggiornati al 1° Febbraio 2026 | Condividi, partecipa, cresci con noi</p>
+            
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+            
+            <p style="margin-top: 20px; font-size: 0.85rem; color: #95a5a6;">
+                Le offerte sono state raccolte da diverse piattaforme: JobInTourism, LinkedIn, Subito.it<br>
+                Per segnalare nuove offerte o unirti alla community: <a href="https://bit.ly/4kj9aWb" style="color: #27ae60;">https://bit.ly/4kj9aWb</a>
+            </p>
         </footer>
     </div>
 </body>
